@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="org.thymeleaf:thymeleaf-spring5" />
+          <option value="org.springframework:spring-core" />
+          <option value="org.springframework:spring-context" />
+          <option value="org.springframework:spring-web" />
+          <option value="org.springframework:spring-webmvc" />
+          <option value="org.springframework:spring-orm" />
+          <option value="org.springframework.data:spring-data-jpa" />
+          <option value="org.hibernate:hibernate-core" />
+          <option value="org.hibernate:hibernate-validator" />
+          <option value="org.apache.commons:commons-dbcp2" />
+          <option value="mysql:mysql-connector-java" />
+          <option value="org.hibernate:hibernate-entitymanager" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
