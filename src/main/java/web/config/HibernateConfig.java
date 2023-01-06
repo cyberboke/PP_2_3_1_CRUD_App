@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -45,19 +44,17 @@ public class HibernateConfig {
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
 
         entityManager.setDataSource(dataSource());
-        entityManager.setPackagesToScan("web.model");
+        entityManager.setPackagesToScan("web");
+
+        Properties properties = new Properties();
+        properties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
+        properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
+        properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
+
+        entityManager.setJpaProperties(properties);
         entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        entityManager.setJpaProperties(getHibernateProperties());
 
         return entityManager;
-    }
-
-    private Properties getHibernateProperties() {
-        Properties properties = new Properties();
-        properties.put("hibernate.dialect", env.getRequiredProperty("db.dialect"));
-        properties.put("hibernate.show_sql", env.getRequiredProperty("db.show_sql"));
-        properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("db.hbm2ddl.auto"));
-        return properties;
     }
 
     @Bean
@@ -66,10 +63,5 @@ public class HibernateConfig {
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 
         return transactionManager;
-    }
-
-    @Bean
-    public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
-        return new PersistenceExceptionTranslationPostProcessor();
     }
 }

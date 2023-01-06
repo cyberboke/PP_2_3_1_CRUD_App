@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3df0133-ac14-4b6f-8142-4bc748469a1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="c3df0133-ac14-4b6f-8142-4bc748469a1f" name="Changes" comment="бд не создается">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/20616a68-3ce7-4be9-bef6-fe666fbe48db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/20616a68-3ce7-4be9-bef6-fe666fbe48db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="XML Properties File" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
         <option value="HTML File" />
-        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -63,12 +63,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rtybz/IdeaProjects/PP_2_2_1_spring_hibernate",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "79f65dfc0eb4fa5feda73a39b13105e4"
+    "last_opened_file_path": "C:/Users/rtybz/IdeaProjects/PP_2_2_2_spring-mvc",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "spring.configuration.checksum": "743e9fa8972e8ff4504d215c6734bcc2"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -81,9 +81,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rtybz\IdeaProjects\CRUD-app\src\main" />
       <recent name="C:\Users\rtybz\IdeaProjects\CRUD-app\src" />
       <recent name="C:\Users\rtybz\IdeaProjects\CRUD-app\src\main\java\web" />
-      <recent name="C:\Users\rtybz\IdeaProjects\CRUD-app\src\main" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="web.config.javaconfig" />
@@ -191,8 +191,18 @@
       <workItem from="1672582136597" duration="4672000" />
       <workItem from="1672587188748" duration="185000" />
       <workItem from="1672587391784" duration="15294000" />
-      <workItem from="1672764779453" duration="3557000" />
+      <workItem from="1672764779453" duration="9311000" />
+      <workItem from="1672850951156" duration="9277000" />
+      <workItem from="1673012655921" duration="4218000" />
     </task>
+    <task id="LOCAL-00001" summary="бд не создается">
+      <created>1672768384535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672768384535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +218,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="бд не создается" />
+    <option name="LAST_COMMIT_MESSAGE" value="бд не создается" />
   </component>
 </project>
