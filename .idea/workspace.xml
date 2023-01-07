@@ -2,19 +2,30 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="CRUD-app:war exploded" />
+      <artifact name="PP_2_3_1_CRUD_App:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3df0133-ac14-4b6f-8142-4bc748469a1f" name="Changes" comment="бд не создается">
+    <list default="true" id="c3df0133-ac14-4b6f-8142-4bc748469a1f" name="Changes" comment="бд создается, контроллер пишется">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/20616a68-3ce7-4be9-bef6-fe666fbe48db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/20616a68-3ce7-4be9-bef6-fe666fbe48db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/AppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +41,8 @@
       <list>
         <option value="XML Properties File" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,12 +74,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "C:/Users/rtybz/IdeaProjects/PP_2_2_2_spring-mvc",
-    "project.structure.last.edited": "Facets",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build",
-    "spring.configuration.checksum": "743e9fa8972e8ff4504d215c6734bcc2"
+    "settings.editor.selected.configurable": "CodeWithMe",
+    "spring.configuration.checksum": "ef00c71e0886e46c17fcd37b3d3efa0a"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -90,17 +102,18 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/users" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="CRUD-app:war exploded">
+        <artifact name="PP_2_3_1_CRUD_App:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="146f74c5-c1cb-4380-8432-248729f0cf5e" />
+        <option name="BASE_DIRECTORY_NAME" value="3911c653-6757-4f21-bc22-833e459b95a4" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -108,7 +121,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55795" />
+        <option name="DEBUG_PORT" value="65145" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -173,7 +186,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="CRUD-app:war exploded" />
+          <artifact name="PP_2_3_1_CRUD_App:war exploded" />
         </option>
       </method>
     </configuration>
@@ -193,7 +206,8 @@
       <workItem from="1672587391784" duration="15294000" />
       <workItem from="1672764779453" duration="9311000" />
       <workItem from="1672850951156" duration="9277000" />
-      <workItem from="1673012655921" duration="4218000" />
+      <workItem from="1673012655921" duration="14898000" />
+      <workItem from="1673112370239" duration="7940000" />
     </task>
     <task id="LOCAL-00001" summary="бд не создается">
       <created>1672768384535</created>
@@ -202,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672768384535</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="бд создается, контроллер пишется">
+      <created>1673017124194</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673017124195</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +242,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="бд не создается" />
-    <option name="LAST_COMMIT_MESSAGE" value="бд не создается" />
+    <MESSAGE value="бд создается, контроллер пишется" />
+    <option name="LAST_COMMIT_MESSAGE" value="бд создается, контроллер пишется" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

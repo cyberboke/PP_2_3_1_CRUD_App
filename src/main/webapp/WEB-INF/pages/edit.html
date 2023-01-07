@@ -2,11 +2,12 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Create a new person</title>
+    <title>Edit user</title>
 </head>
 <body>
-<form th:method="POST"
-      th:action="@{/users}"
+
+<form th:method="PATCH"
+      th:action="@{/users/{id}(id=${user.getId()})}"
       th:object="${user}">
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name"/>
@@ -23,10 +24,9 @@
     <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error</div>
     <br/>
     <br/>
-    <input type="submit" value="Create!"/>
+    <br/>
+    <input type="submit" value="Update!"/>
 </form>
-<br/>
-<br/>
-<a href="/users">Don't want to create a new user?</a>
+
 </body>
 </html>
